@@ -1,0 +1,22 @@
+def calcular_soma():
+    print("\n=== CALCULADORA DE VOLUME ===")
+
+    try:
+        comprimento = float(input("Digite o comprimento: "))
+        largura = float(input("Digite a largura: "))
+        altura = float(input("Digite a altura: "))
+
+        volume = comprimento * largura * altura
+        print(f"\n o volume entre {comprimento}, {largura} e {altura} é igual a: {volume} cm3" )
+
+    except ValueError:
+        print("\n Erro: digite apenas números válidos (inteiros ou decimais).")
+
+# Loop principal
+while True:
+    calcular_volume()
+
+    repetir = input("\n Deseja fazer outra volume? (s/n): ").strip().lower()
+    if repetir != 's':
+        print("\n Encerrando a calculadora de volume. Até mais!")
+        break

@@ -1,0 +1,21 @@
+def calcular_soma():
+    print("\n=== CALCULADORA DE SOMA ===")
+
+    try:
+        numero1 = float(input("Digite o primeiro número: "))
+        numero2 = float(input("Digite o segundo número: "))
+
+        soma = numero1 + numero2
+        print(f"\n A soma entre {numero1} e {numero2} é igual a: {soma}")
+
+    except ValueError:
+        print("\n Erro: digite apenas números válidos (inteiros ou decimais).")
+
+# Loop principal
+while True:
+    calcular_soma()
+
+    repetir = input("\n Deseja fazer outra soma? (s/n): ").strip().lower()
+    if repetir != 's':
+        print("\n Encerrando a calculadora de soma. Até mais!")
+        break
