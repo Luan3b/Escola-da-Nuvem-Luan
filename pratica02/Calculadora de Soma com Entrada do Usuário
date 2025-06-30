@@ -1,0 +1,11 @@
+print("\n=== CALCULADORA DE SOMA ===")
+
+try:
+    A = int(input("Digite o valor de A: "))
+    B = int(input("Digite o valor de B: "))
+
+    X = A + B
+
+    print(f"X = {X}\n")
+except ValueError:
+    print(" Erro: digite apenas números inteiros.")

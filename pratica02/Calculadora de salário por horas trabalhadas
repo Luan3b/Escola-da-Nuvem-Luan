@@ -1,0 +1,14 @@
+print("\n=== CALCULADORA DE SALÁRIO ===")
+
+try:
+    numero_funcionario = int(input("Número do funcionário: "))
+    horas_trabalhadas = int(input("Horas trabalhadas: "))
+    valor_por_hora = float(input("Valor por hora (R$): "))
+
+    salario = horas_trabalhadas * valor_por_hora
+
+    print(f"Número do funcionário = {numero_funcionario}")
+    print(f"Salário = R$ {salario:.2f}")
+
+except ValueError:
+    print(" Erro: valores inválidos digitados.")
