@@ -1,0 +1,9 @@
+import string
+
+def verificar_palindromo(texto: str) -> str:
+    texto = texto.lower()
+    texto = ''.join(char for char in texto if char.isalnum())
+    return "Sim" if texto == texto[::-1] else "Não"
+
+print(verificar_palindromo(input(" ")))
+
