@@ -1,0 +1,20 @@
+import requests
+
+def gerar_usuario():
+    url = "https://randomuser.me/api/"
+    resposta = requests.get(url)
+
+    if resposta.status_code == 200:
+        dados = resposta.json()
+        user = dados["results"][0]
+        nome = f'{user["name"]["first"]} {user["name"]["last"]}'
+        email = user["email"]
+        pais = user["location"]["country"]
+
+        print(f"Nome: {nome}")
+        print(f"E-mail: {email}")
+        print(f"País: {pais}")
+    else:
+        print("Erro ao acessar a API.")
+
+gerar_usuario()
