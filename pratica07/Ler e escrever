@@ -1,0 +1,18 @@
+import json
+
+# Dados para salvar
+pessoa = {
+    "nome": "Carlos",
+    "idade": 40,
+    "cidade": "Belo Horizonte"
+}
+
+# Escrevendo em JSON
+with open('pessoa.json', 'w', encoding='utf-8') as arquivo:
+    json.dump(pessoa, arquivo, ensure_ascii=False, indent=4)
+
+# Lendo do JSON
+with open('pessoa.json', 'r', encoding='utf-8') as arquivo:
+    dados_lidos = json.load(arquivo)
+    print("Dados lidos do JSON:")
+    print(dados_lidos)
